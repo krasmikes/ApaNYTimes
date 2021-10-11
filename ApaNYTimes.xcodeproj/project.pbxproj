@@ -16,6 +16,7 @@
 		2943EB3427141E2F004BE12C /* ApaNYTimesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2943EB3327141E2F004BE12C /* ApaNYTimesTests.swift */; };
 		2943EB3E27141E2F004BE12C /* ApaNYTimesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2943EB3D27141E2F004BE12C /* ApaNYTimesUITests.swift */; };
 		2943EB4027141E2F004BE12C /* ApaNYTimesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2943EB3F27141E2F004BE12C /* ApaNYTimesUITestsLaunchTests.swift */; };
+		2943EB5027142479004BE12C /* NewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2943EB4F27142479004BE12C /* NewsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		2943EB3927141E2F004BE12C /* ApaNYTimesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApaNYTimesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2943EB3D27141E2F004BE12C /* ApaNYTimesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApaNYTimesUITests.swift; sourceTree = "<group>"; };
 		2943EB3F27141E2F004BE12C /* ApaNYTimesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApaNYTimesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2943EB4F27142479004BE12C /* NewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +103,9 @@
 			children = (
 				2943EB1C27141E2B004BE12C /* AppDelegate.swift */,
 				2943EB1E27141E2B004BE12C /* SceneDelegate.swift */,
-				2943EB2027141E2B004BE12C /* ViewController.swift */,
-				2943EB2227141E2B004BE12C /* Main.storyboard */,
+				2943EB4E27142448004BE12C /* Models */,
+				2943EB4D27141E7C004BE12C /* Views */,
+				2943EB4C27141E70004BE12C /* Controllers */,
 				2943EB2527141E2F004BE12C /* Assets.xcassets */,
 				2943EB2727141E2F004BE12C /* LaunchScreen.storyboard */,
 				2943EB2A27141E2F004BE12C /* Info.plist */,
@@ -125,6 +128,30 @@
 				2943EB3F27141E2F004BE12C /* ApaNYTimesUITestsLaunchTests.swift */,
 			);
 			path = ApaNYTimesUITests;
+			sourceTree = "<group>";
+		};
+		2943EB4C27141E70004BE12C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2943EB2027141E2B004BE12C /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2943EB4D27141E7C004BE12C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2943EB2227141E2B004BE12C /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2943EB4E27142448004BE12C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2943EB4F27142479004BE12C /* NewsManager.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2943EB5027142479004BE12C /* NewsManager.swift in Sources */,
 				2943EB2127141E2B004BE12C /* ViewController.swift in Sources */,
 				2943EB1D27141E2B004BE12C /* AppDelegate.swift in Sources */,
 				2943EB1F27141E2B004BE12C /* SceneDelegate.swift in Sources */,
@@ -445,8 +473,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,7 +486,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -473,8 +503,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -484,7 +516,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
