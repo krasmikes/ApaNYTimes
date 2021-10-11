@@ -1,0 +1,629 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2943EB1D27141E2B004BE12C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2943EB1C27141E2B004BE12C /* AppDelegate.swift */; };
+		2943EB1F27141E2B004BE12C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2943EB1E27141E2B004BE12C /* SceneDelegate.swift */; };
+		2943EB2127141E2B004BE12C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2943EB2027141E2B004BE12C /* ViewController.swift */; };
+		2943EB2427141E2B004BE12C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2943EB2227141E2B004BE12C /* Main.storyboard */; };
+		2943EB2627141E2F004BE12C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2943EB2527141E2F004BE12C /* Assets.xcassets */; };
+		2943EB2927141E2F004BE12C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2943EB2727141E2F004BE12C /* LaunchScreen.storyboard */; };
+		2943EB3427141E2F004BE12C /* ApaNYTimesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2943EB3327141E2F004BE12C /* ApaNYTimesTests.swift */; };
+		2943EB3E27141E2F004BE12C /* ApaNYTimesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2943EB3D27141E2F004BE12C /* ApaNYTimesUITests.swift */; };
+		2943EB4027141E2F004BE12C /* ApaNYTimesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2943EB3F27141E2F004BE12C /* ApaNYTimesUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2943EB3027141E2F004BE12C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2943EB1127141E2B004BE12C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2943EB1827141E2B004BE12C;
+			remoteInfo = ApaNYTimes;
+		};
+		2943EB3A27141E2F004BE12C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2943EB1127141E2B004BE12C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2943EB1827141E2B004BE12C;
+			remoteInfo = ApaNYTimes;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2943EB1927141E2B004BE12C /* ApaNYTimes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApaNYTimes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2943EB1C27141E2B004BE12C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2943EB1E27141E2B004BE12C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2943EB2027141E2B004BE12C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2943EB2327141E2B004BE12C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2943EB2527141E2F004BE12C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2943EB2827141E2F004BE12C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2943EB2A27141E2F004BE12C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2943EB2F27141E2F004BE12C /* ApaNYTimesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApaNYTimesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2943EB3327141E2F004BE12C /* ApaNYTimesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApaNYTimesTests.swift; sourceTree = "<group>"; };
+		2943EB3927141E2F004BE12C /* ApaNYTimesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApaNYTimesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2943EB3D27141E2F004BE12C /* ApaNYTimesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApaNYTimesUITests.swift; sourceTree = "<group>"; };
+		2943EB3F27141E2F004BE12C /* ApaNYTimesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApaNYTimesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2943EB1627141E2B004BE12C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2943EB2C27141E2F004BE12C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2943EB3627141E2F004BE12C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2943EB1027141E2B004BE12C = {
+			isa = PBXGroup;
+			children = (
+				2943EB1B27141E2B004BE12C /* ApaNYTimes */,
+				2943EB3227141E2F004BE12C /* ApaNYTimesTests */,
+				2943EB3C27141E2F004BE12C /* ApaNYTimesUITests */,
+				2943EB1A27141E2B004BE12C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2943EB1A27141E2B004BE12C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2943EB1927141E2B004BE12C /* ApaNYTimes.app */,
+				2943EB2F27141E2F004BE12C /* ApaNYTimesTests.xctest */,
+				2943EB3927141E2F004BE12C /* ApaNYTimesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2943EB1B27141E2B004BE12C /* ApaNYTimes */ = {
+			isa = PBXGroup;
+			children = (
+				2943EB1C27141E2B004BE12C /* AppDelegate.swift */,
+				2943EB1E27141E2B004BE12C /* SceneDelegate.swift */,
+				2943EB2027141E2B004BE12C /* ViewController.swift */,
+				2943EB2227141E2B004BE12C /* Main.storyboard */,
+				2943EB2527141E2F004BE12C /* Assets.xcassets */,
+				2943EB2727141E2F004BE12C /* LaunchScreen.storyboard */,
+				2943EB2A27141E2F004BE12C /* Info.plist */,
+			);
+			path = ApaNYTimes;
+			sourceTree = "<group>";
+		};
+		2943EB3227141E2F004BE12C /* ApaNYTimesTests */ = {
+			isa = PBXGroup;
+			children = (
+				2943EB3327141E2F004BE12C /* ApaNYTimesTests.swift */,
+			);
+			path = ApaNYTimesTests;
+			sourceTree = "<group>";
+		};
+		2943EB3C27141E2F004BE12C /* ApaNYTimesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2943EB3D27141E2F004BE12C /* ApaNYTimesUITests.swift */,
+				2943EB3F27141E2F004BE12C /* ApaNYTimesUITestsLaunchTests.swift */,
+			);
+			path = ApaNYTimesUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2943EB1827141E2B004BE12C /* ApaNYTimes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2943EB4327141E2F004BE12C /* Build configuration list for PBXNativeTarget "ApaNYTimes" */;
+			buildPhases = (
+				2943EB1527141E2B004BE12C /* Sources */,
+				2943EB1627141E2B004BE12C /* Frameworks */,
+				2943EB1727141E2B004BE12C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ApaNYTimes;
+			productName = ApaNYTimes;
+			productReference = 2943EB1927141E2B004BE12C /* ApaNYTimes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2943EB2E27141E2F004BE12C /* ApaNYTimesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2943EB4627141E2F004BE12C /* Build configuration list for PBXNativeTarget "ApaNYTimesTests" */;
+			buildPhases = (
+				2943EB2B27141E2F004BE12C /* Sources */,
+				2943EB2C27141E2F004BE12C /* Frameworks */,
+				2943EB2D27141E2F004BE12C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2943EB3127141E2F004BE12C /* PBXTargetDependency */,
+			);
+			name = ApaNYTimesTests;
+			productName = ApaNYTimesTests;
+			productReference = 2943EB2F27141E2F004BE12C /* ApaNYTimesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2943EB3827141E2F004BE12C /* ApaNYTimesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2943EB4927141E2F004BE12C /* Build configuration list for PBXNativeTarget "ApaNYTimesUITests" */;
+			buildPhases = (
+				2943EB3527141E2F004BE12C /* Sources */,
+				2943EB3627141E2F004BE12C /* Frameworks */,
+				2943EB3727141E2F004BE12C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2943EB3B27141E2F004BE12C /* PBXTargetDependency */,
+			);
+			name = ApaNYTimesUITests;
+			productName = ApaNYTimesUITests;
+			productReference = 2943EB3927141E2F004BE12C /* ApaNYTimesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2943EB1127141E2B004BE12C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					2943EB1827141E2B004BE12C = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					2943EB2E27141E2F004BE12C = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 2943EB1827141E2B004BE12C;
+					};
+					2943EB3827141E2F004BE12C = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 2943EB1827141E2B004BE12C;
+					};
+				};
+			};
+			buildConfigurationList = 2943EB1427141E2B004BE12C /* Build configuration list for PBXProject "ApaNYTimes" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2943EB1027141E2B004BE12C;
+			productRefGroup = 2943EB1A27141E2B004BE12C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2943EB1827141E2B004BE12C /* ApaNYTimes */,
+				2943EB2E27141E2F004BE12C /* ApaNYTimesTests */,
+				2943EB3827141E2F004BE12C /* ApaNYTimesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2943EB1727141E2B004BE12C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2943EB2927141E2F004BE12C /* LaunchScreen.storyboard in Resources */,
+				2943EB2627141E2F004BE12C /* Assets.xcassets in Resources */,
+				2943EB2427141E2B004BE12C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2943EB2D27141E2F004BE12C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2943EB3727141E2F004BE12C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2943EB1527141E2B004BE12C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2943EB2127141E2B004BE12C /* ViewController.swift in Sources */,
+				2943EB1D27141E2B004BE12C /* AppDelegate.swift in Sources */,
+				2943EB1F27141E2B004BE12C /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2943EB2B27141E2F004BE12C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2943EB3427141E2F004BE12C /* ApaNYTimesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2943EB3527141E2F004BE12C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2943EB3E27141E2F004BE12C /* ApaNYTimesUITests.swift in Sources */,
+				2943EB4027141E2F004BE12C /* ApaNYTimesUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2943EB3127141E2F004BE12C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2943EB1827141E2B004BE12C /* ApaNYTimes */;
+			targetProxy = 2943EB3027141E2F004BE12C /* PBXContainerItemProxy */;
+		};
+		2943EB3B27141E2F004BE12C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2943EB1827141E2B004BE12C /* ApaNYTimes */;
+			targetProxy = 2943EB3A27141E2F004BE12C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2943EB2227141E2B004BE12C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2943EB2327141E2B004BE12C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2943EB2727141E2F004BE12C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2943EB2827141E2F004BE12C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2943EB4127141E2F004BE12C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2943EB4227141E2F004BE12C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2943EB4427141E2F004BE12C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GB4R5FUHG3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ApaNYTimes/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.krasmikes.ApaNYTimes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2943EB4527141E2F004BE12C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GB4R5FUHG3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ApaNYTimes/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.krasmikes.ApaNYTimes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2943EB4727141E2F004BE12C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GB4R5FUHG3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.krasmikes.ApaNYTimesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ApaNYTimes.app/ApaNYTimes";
+			};
+			name = Debug;
+		};
+		2943EB4827141E2F004BE12C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GB4R5FUHG3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.krasmikes.ApaNYTimesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ApaNYTimes.app/ApaNYTimes";
+			};
+			name = Release;
+		};
+		2943EB4A27141E2F004BE12C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GB4R5FUHG3;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.krasmikes.ApaNYTimesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ApaNYTimes;
+			};
+			name = Debug;
+		};
+		2943EB4B27141E2F004BE12C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GB4R5FUHG3;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.krasmikes.ApaNYTimesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ApaNYTimes;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2943EB1427141E2B004BE12C /* Build configuration list for PBXProject "ApaNYTimes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2943EB4127141E2F004BE12C /* Debug */,
+				2943EB4227141E2F004BE12C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2943EB4327141E2F004BE12C /* Build configuration list for PBXNativeTarget "ApaNYTimes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2943EB4427141E2F004BE12C /* Debug */,
+				2943EB4527141E2F004BE12C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2943EB4627141E2F004BE12C /* Build configuration list for PBXNativeTarget "ApaNYTimesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2943EB4727141E2F004BE12C /* Debug */,
+				2943EB4827141E2F004BE12C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2943EB4927141E2F004BE12C /* Build configuration list for PBXNativeTarget "ApaNYTimesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2943EB4A27141E2F004BE12C /* Debug */,
+				2943EB4B27141E2F004BE12C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2943EB1127141E2B004BE12C /* Project object */;
+}
