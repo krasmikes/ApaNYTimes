@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19206" systemVersion="20G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Article" representedClassName="Article" syncable="YES" codeGenerationType="class">
+        <attribute name="abstract" optional="YES" attributeType="String"/>
+        <attribute name="bigPicture" optional="YES" attributeType="Binary"/>
+        <attribute name="byline" optional="YES" attributeType="String"/>
+        <attribute name="created_date" optional="YES" attributeType="String"/>
+        <attribute name="des_facet" optional="YES" attributeType="String"/>
+        <attribute name="geo_facet" optional="YES" attributeType="String"/>
+        <attribute name="item_type" optional="YES" attributeType="String"/>
+        <attribute name="kicker" optional="YES" attributeType="String"/>
+        <attribute name="material_type_facet" optional="YES" attributeType="String"/>
+        <attribute name="multimedia" optional="YES" attributeType="String"/>
+        <attribute name="org_facet" optional="YES" attributeType="String"/>
+        <attribute name="per_facet" optional="YES" attributeType="String"/>
+        <attribute name="published_date" optional="YES" attributeType="String"/>
+        <attribute name="section" optional="YES" attributeType="String"/>
+        <attribute name="short_url" optional="YES" attributeType="String"/>
+        <attribute name="smallPicture" optional="YES" attributeType="String"/>
+        <attribute name="subsection" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="updated_date" optional="YES" attributeType="String"/>
+        <attribute name="uri" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="NewsData" representedClassName="NewsData" syncable="YES" codeGenerationType="class">
+        <attribute name="copyright" optional="YES" attributeType="String"/>
+        <attribute name="last_updated" optional="YES" attributeType="String"/>
+        <attribute name="num_results" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="section" optional="YES" attributeType="String"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="NewsData" positionX="-63" positionY="-18" width="128" height="14"/>
+        <element name="Article" positionX="-54" positionY="9" width="128" height="344"/>
+    </elements>
+</model>
