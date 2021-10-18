@@ -25,12 +25,12 @@ class NewsViewController: UIViewController {
         title = "Updating..."
         
         manager.delegate = self
-        manager.fetchData()
+        manager.readData()
     }
 
     @IBAction func updateButtonPressed(_ sender: UIButton) {
         title = "Updating..."
-        manager.updateData() // сделать отдельный метод
+        manager.updateData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -107,7 +107,7 @@ extension NewsViewController: NewsManagerDelegate {
             }
         } else {
             DispatchQueue.main.async {
-                let alert = UIAlertController(title: "Неизвестная ошибка", message: "Обратитесь к разработчику\n \(error)", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Неизвестная ошибка", message: "Обратитесь к разработчику\n \(error.localizedDescription)", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             }

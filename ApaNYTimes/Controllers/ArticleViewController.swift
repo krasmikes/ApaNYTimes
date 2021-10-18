@@ -32,6 +32,14 @@ class ArticleViewController: UIViewController {
                 articleAuthor.text = article.byline
                 articleDate.text = article.published_date
                 articleText.text = article.abstract
+                for media in article.multimedia {
+                    if let media = media {
+                        if media.format == pictureFormat {
+                            articlePictureCopyright.text = media.copyright
+                            articlePictureCaption.text = media.caption
+                        }
+                    }
+                }
                 if let rawImageData = article.bigPicture {
                     DispatchQueue.main.async {
                         self.articlePicture.image = UIImage(data: rawImageData)
