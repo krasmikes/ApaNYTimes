@@ -7,42 +7,44 @@
 
 import Foundation
 
-struct Urls {
+struct Constans {
     static private let apiBasicUrl: String = "https://api.nytimes.com/svc/topstories/v2/"
     static private let apiSection: String = "automobiles.json"
     static private let apiKeyPrefix: String = "?api-key="
     static private let apiKey: String = "H88p8Qh3WaR6fOqLewSZAyNkuQMD5ANB"
-    static var arts: String {
+    static var artsUrl: String {
         apiBasicUrl + "arts.json" + apiKeyPrefix + apiKey
     }
-    static var automobiles: String {
+    static var automobilesUrl: String {
         apiBasicUrl + "automobiles.json" + apiKeyPrefix + apiKey
     }
-    static var business: String {
+    static var businessUrl: String {
         apiBasicUrl + "business.json" + apiKeyPrefix + apiKey
     }
-    static var home: String {
+    static var homeUrl: String {
         apiBasicUrl + "home.json" + apiKeyPrefix + apiKey
     }
-    static var politics: String {
+    static var politicsUrl: String {
         apiBasicUrl + "politics.json" + apiKeyPrefix + apiKey
     }
-    static var science: String {
+    static var scienceUrl: String {
         apiBasicUrl + "science.json" + apiKeyPrefix + apiKey
     }
-    static var sports: String {
+    static var sportsUrl: String {
         apiBasicUrl + "sports.json" + apiKeyPrefix + apiKey
     }
-    static var technology: String {
+    static var technologyUrl: String {
         apiBasicUrl + "technology.json" + apiKeyPrefix + apiKey
     }
-    static var travel: String {
+    static var travelUrl: String {
         apiBasicUrl + "travel.json" + apiKeyPrefix + apiKey
     }
-    static var world: String {
+    static var worldUrl: String {
         apiBasicUrl + "world.json" + apiKeyPrefix + apiKey
     }
     
     
-    static let file = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("ApaNYTimesData.bin")
+    static let fileUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("ApaNYTimesData.bin")
+    
+    
 }
