@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YPY-x2-7dV">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="704"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="679.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NewsCell" id="x9G-RI-ORw">
@@ -38,13 +38,22 @@
                                         </prototypes>
                                         <sections/>
                                     </tableView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last updated: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNB-Bv-qpW">
+                                        <rect key="frame" x="166.5" y="689.5" width="81.5" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KHX-PN-T56">
                                         <rect key="frame" x="20" y="714" width="374" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="drO-OE-ji1"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Обновить данные"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Update feed">
+                                            <color key="baseForegroundColor" name="OnButtonTextColors"/>
+                                            <color key="baseBackgroundColor" name="ButtonsColors"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="updateButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rh8-tn-RCE"/>
                                         </connections>
@@ -54,9 +63,11 @@
                                     <constraint firstItem="KHX-PN-T56" firstAttribute="leading" secondItem="W9z-cn-Abj" secondAttribute="leading" constant="20" id="7Oa-pk-6ij"/>
                                     <constraint firstItem="YPY-x2-7dV" firstAttribute="top" secondItem="W9z-cn-Abj" secondAttribute="topMargin" id="88W-yR-HdC"/>
                                     <constraint firstItem="YPY-x2-7dV" firstAttribute="trailing" secondItem="W9z-cn-Abj" secondAttribute="trailingMargin" id="ISS-uK-Dn8"/>
+                                    <constraint firstItem="RNB-Bv-qpW" firstAttribute="top" secondItem="YPY-x2-7dV" secondAttribute="bottom" constant="10" id="Zxe-38-K7E"/>
                                     <constraint firstItem="YPY-x2-7dV" firstAttribute="leading" secondItem="W9z-cn-Abj" secondAttribute="leadingMargin" id="i8k-HJ-0Nj"/>
-                                    <constraint firstItem="KHX-PN-T56" firstAttribute="top" secondItem="YPY-x2-7dV" secondAttribute="bottom" constant="10" id="pPF-eo-av1"/>
                                     <constraint firstAttribute="trailing" secondItem="KHX-PN-T56" secondAttribute="trailing" constant="20" id="shi-9Q-pJN"/>
+                                    <constraint firstItem="KHX-PN-T56" firstAttribute="top" secondItem="RNB-Bv-qpW" secondAttribute="bottom" constant="10" id="v1N-b0-MPa"/>
+                                    <constraint firstItem="RNB-Bv-qpW" firstAttribute="centerX" secondItem="W9z-cn-Abj" secondAttribute="centerX" id="yEL-KV-bJ4"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -71,6 +82,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Op2-ep-vg6"/>
                     <connections>
+                        <outlet property="lastUpdatedLabel" destination="RNB-Bv-qpW" id="pvh-Zc-baR"/>
                         <outlet property="tableView" destination="YPY-x2-7dV" id="BOy-Ep-OhB"/>
                     </connections>
                 </viewController>
@@ -104,7 +116,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kitten" translatesAutoresizingMaskIntoConstraints="NO" id="366-q7-npm">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="366-q7-npm">
                                 <rect key="frame" x="20" y="173.5" width="374" height="210.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="366-q7-npm" secondAttribute="height" multiplier="16:9" id="JjM-hb-Fvf"/>
@@ -136,7 +148,10 @@
                                     <constraint firstAttribute="height" constant="60" id="NUO-5R-aSg"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Читать в источнике"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Open in browser">
+                                    <color key="baseForegroundColor" name="OnButtonTextColors"/>
+                                    <color key="baseBackgroundColor" name="ButtonsColors"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="sourceButtonPressed:" destination="rR6-tX-DlL" eventType="touchUpInside" id="rkc-WP-92N"/>
                                 </connections>
@@ -206,7 +221,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="kitten" width="768" height="794"/>
+        <image name="placeholder" width="300" height="168"/>
+        <namedColor name="ButtonsColors">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="OnButtonTextColors">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

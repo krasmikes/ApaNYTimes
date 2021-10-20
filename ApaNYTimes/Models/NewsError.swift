@@ -15,7 +15,10 @@ enum NewsError: LocalizedError {
     
     var errorDescription: String? {
         switch self {
-        case .notValidURL(let description), .notValidJSONRecieved(let description), .notReadableFile(let description), .notAbleToSave(let description):
+        case .notValidURL(let description),
+            .notValidJSONRecieved(let description),
+            .notReadableFile(let description),
+            .notAbleToSave(let description):
             return description
         }
     }

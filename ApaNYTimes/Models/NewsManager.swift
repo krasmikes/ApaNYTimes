@@ -18,6 +18,7 @@ protocol NewsManagerDelegate {
 struct NewsManager {
   
     var delegate: NewsManagerDelegate?
+    let formatter = DateFormatter()
     
     func updateData (_ url: String = Constans.automobilesUrl, _ session: URLSession = URLSession(configuration: .default)) {
         if let url = URL(string: url) {
@@ -55,6 +56,7 @@ struct NewsManager {
     
     func saveData (for model: NewsModel, _ url: URL = Constans.fileUrl) {
         let encoder = JSONEncoder()
+        encoder.dateEncodingStrategy = .iso8601
         do {
             let data = try encoder.encode(model.data)
             try data.write(to: url, options: [.completeFileProtection])
@@ -71,6 +73,7 @@ struct NewsManager {
     
     func parseJSON(_ data: Data) -> NewsModel? {
         let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
         do {
             let decodedData = try decoder.decode(NewsData.self, from: data)
             let model = NewsModel(data: decodedData)

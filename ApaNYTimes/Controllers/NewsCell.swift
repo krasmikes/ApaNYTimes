@@ -14,6 +14,7 @@ class NewsCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        cellImageView.isHidden = true
         // Initialization code
     }
 

@@ -11,7 +11,7 @@ struct NewsData: Codable {
     let status: String
     let copyright: String
     let section: String
-    let last_updated: String
+    let last_updated: Date
     let num_results: Int
     var results: [Article?]
 }
@@ -22,7 +22,7 @@ struct Article: Codable {
     let abstract: String
     let url: String
     let byline: String
-    let published_date: String
+    let published_date: Date
     var multimedia: [Multimedia?]
     var smallPicture: Data?
     var bigPicture: Data?

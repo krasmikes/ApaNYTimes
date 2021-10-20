@@ -104,7 +104,9 @@ class NewsManagerTests: XCTestCase {
       
         //Arrange
         let url = "https://example.com/"
-        let exampleJson = try? JSONEncoder().encode(validJSONExample)
+        let encoder = JSONEncoder()
+        encoder.dateEncodingStrategy = .iso8601
+        let exampleJson = try? encoder.encode(validJSONExample)
         URLProtocolMock.stubResponseData = exampleJson
         let expectation = self.expectation(description: "Delegate method should be called")
         URLProtocolMock.expectation = expectation
@@ -163,7 +165,9 @@ class NewsManagerTests: XCTestCase {
     func testNewsManager_WhenValidFileURLPassedWithValidFile_ShouldCallDelegateMethodDidUpdateData () {
         //Arrange
         let url = FileManager.default.temporaryDirectory.appendingPathComponent("TestJson.bin")
-        let exampleJson = try! JSONEncoder().encode(validJSONExample)
+        let encoder = JSONEncoder()
+        encoder.dateEncodingStrategy = .iso8601
+        let exampleJson = try! encoder.encode(validJSONExample)
         try! exampleJson.write(to: url, options: [.completeFileProtection])
         URLProtocolMock.stubResponseData = exampleJson
         let expectation = self.expectation(description: "Delegate method should be called")
@@ -204,7 +208,7 @@ class NewsManagerTests: XCTestCase {
     func testNewsManager_WhenValidURLRequestedToLoadPicture_ShouldRecieveResponse () {
         //Arrange
         let article = validJSONExample.results[0]!
-        let format = "Standard Thumbnail"
+        let format = "superJumbo"
         let expectation = self.expectation(description: "Delegate method should be called")
         URLProtocolMock.expectation = expectation
         //Act
@@ -218,13 +222,28 @@ class NewsManagerTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
+    func testNewsManager_WhenNotValidURLRequestedToLoadPicture_ShouldReternSpecificError () {
+        //Arrange
+        let article = validJSONExample.results[0]!
+        let format = "Standard Thumbnail"
+        let expectation = self.expectation(description: "Delegate method should be called")
+        URLProtocolMock.expectation = expectation
+        //Act
+        sut.loadPicture(for: article, format: format) { _, _, _ in }
+        
+        //Assert
+        waitForExpectations(timeout: 5, handler: nil)
+        XCTAssertEqual(delegate.didFailWithNotValidURLCount, 1)
+    }
+    
+    
     let notValidJSONExample = ["status": "fail"]
     
     let validJSONExample = NewsData(
         status: "OK",
         copyright: "Test_copyright",
         section: "Test_section",
-        last_updated: "Test_last_updated",
+        last_updated: Date(),
         num_results: 1,
         results: [
             Article(
@@ -233,7 +252,7 @@ class NewsManagerTests: XCTestCase {
                 abstract: "Test_abstract",
                 url: "https://example.com",
                 byline: "Test_byline",
-                published_date: "Test_published_date",
+                published_date: Date(),
                 multimedia: [
                     Multimedia(
                         url: "https://raw.githubusercontent.com/krasmikes/kek/master/partners_bd_528x364.png?token=AKNAZVGBF2KV3W7CGGIUJ5DBNVNQ2",
@@ -243,7 +262,7 @@ class NewsManagerTests: XCTestCase {
                         caption: "Test_caption",
                         copyright: "Test_copyright"),
                     Multimedia(
-                        url: "https://raw.githubusercontent.com/krasmikes/kek/master/speech_bd_528x364.png?token=AKNAZVAB3DLT7FVK3ATGPYTBNVOWM",
+                        url: "",
                         format: "Standard Thumbnail",
                         height: 0,
                         width: 0,

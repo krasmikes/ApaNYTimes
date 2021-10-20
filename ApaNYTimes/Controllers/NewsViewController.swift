@@ -11,6 +11,7 @@ class NewsViewController: UIViewController {
     
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var lastUpdatedLabel: UILabel!
     
     var manager = NewsManager()
     var model: NewsModel?
@@ -23,8 +24,10 @@ class NewsViewController: UIViewController {
         tableView.register(UINib(nibName: "NewsCell", bundle: nil), forCellReuseIdentifier: "NewsCell")
         
         title = "Updating..."
+        lastUpdatedLabel.isHidden = true
         
         manager.delegate = self
+        
         manager.readData()
     }
 
@@ -60,6 +63,7 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
         if let article = model?.data.results[indexPath.row] {
             if let rawImageData = article.smallPicture {
                 DispatchQueue.main.async {
+                    cell.cellImageView.isHidden = false
                     cell.cellImageView.image = UIImage(data: rawImageData)
                 }
             } else {
@@ -69,6 +73,7 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
                         self.manager.saveData(for: self.model!)
                         
                         DispatchQueue.main.async {
+                            cell.cellImageView.isHidden = false
                             cell.cellImageView.image = UIImage(data: safeData)
                         }
                     }
@@ -94,6 +99,9 @@ extension NewsViewController: NewsManagerDelegate {
         self.model = model
         DispatchQueue.main.async {
             self.title = model.data.section
+            self.manager.formatter.dateFormat = "HH:mm:ss dd MMM yyyy"
+            self.lastUpdatedLabel.text = self.manager.formatter.string(from: model.data.last_updated)
+            self.lastUpdatedLabel.isHidden = false
             self.tableView.reloadData()
         }
     }
@@ -107,7 +115,7 @@ extension NewsViewController: NewsManagerDelegate {
             }
         } else {
             DispatchQueue.main.async {
-                let alert = UIAlertController(title: "Неизвестная ошибка", message: "Обратитесь к разработчику\n \(error.localizedDescription)", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Ошибка", message: "Обратитесь к разработчику\n \(error.localizedDescription)", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             }

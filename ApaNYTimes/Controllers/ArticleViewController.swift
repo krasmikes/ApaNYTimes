@@ -25,23 +25,30 @@ class ArticleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        articlePicture.isHidden = true
+        articlePictureCopyright.isHidden = true
+        articlePictureCaption.isHidden = true
         
         if let index = index {
             if let article = model?.data.results[index] {
                 articleTitle.text = article.title
                 articleAuthor.text = article.byline
-                articleDate.text = article.published_date
+                manager?.formatter.dateFormat = "dd MMM yyyy"
+                articleDate.text = manager?.formatter.string(from: article.published_date)
                 articleText.text = article.abstract
                 for media in article.multimedia {
                     if let media = media {
                         if media.format == pictureFormat {
+                            articlePictureCopyright.isHidden = false
                             articlePictureCopyright.text = media.copyright
+                            articlePictureCaption.isHidden = false
                             articlePictureCaption.text = media.caption
                         }
                     }
                 }
                 if let rawImageData = article.bigPicture {
                     DispatchQueue.main.async {
+                        self.articlePicture.isHidden = false
                         self.articlePicture.image = UIImage(data: rawImageData)
                     }
                 } else {
@@ -52,6 +59,7 @@ class ArticleViewController: UIViewController {
                                 manager.saveData(for: self.model!)
                                 
                                 DispatchQueue.main.async {
+                                    self.articlePicture.isHidden = false
                                     self.articlePicture.image = UIImage(data: safeData)
                                 }
                             }

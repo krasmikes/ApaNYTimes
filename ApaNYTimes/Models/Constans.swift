@@ -9,7 +9,6 @@ import Foundation
 
 struct Constans {
     static private let apiBasicUrl: String = "https://api.nytimes.com/svc/topstories/v2/"
-    static private let apiSection: String = "automobiles.json"
     static private let apiKeyPrefix: String = "?api-key="
     static private let apiKey: String = "H88p8Qh3WaR6fOqLewSZAyNkuQMD5ANB"
     static var artsUrl: String {
@@ -42,7 +41,6 @@ struct Constans {
     static var worldUrl: String {
         apiBasicUrl + "world.json" + apiKeyPrefix + apiKey
     }
-    
     
     static let fileUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("ApaNYTimesData.bin")
     
